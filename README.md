@@ -84,14 +84,6 @@ http://node1:4040/jobs/
 http://node1:8080/
 ![image](https://user-images.githubusercontent.com/75282285/194138246-08d1c8a2-749e-4f72-b91b-f1fa5d69dc51.png)
 
-# DebugString
-Print the DebugString.
-~~~
-print(model.toDebugString())
-~~~
-
-![image](https://user-images.githubusercontent.com/75282285/192617611-b294921c-5be5-4393-9073-96793e3c46b4.png)
-
 
 
 
