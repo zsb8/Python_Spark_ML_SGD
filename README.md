@@ -73,7 +73,7 @@ def predict_data(best_model):
         result_predict = best_model.predict(data[1])
         print(f"web:{data[0]}, \n predict:{result_predict}, desc: {dic_desc[result_predict]}")
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/194131514-1b1213e2-785b-43c9-a1f5-5f0fe3fc750e.png)
+![image](https://user-images.githubusercontent.com/75282285/194137552-20d00455-5121-4207-9712-bfe8c663883e.png)
 
 # Spark monitor
 http://node1:4040/jobs/
