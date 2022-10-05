@@ -20,41 +20,23 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 ![image](https://user-images.githubusercontent.com/75282285/194131970-37be45bf-dcc8-4ac6-a52e-e2e411346601.png)
 
 
-Compared the difference of depth parameters. It looked like the AUC was the best one if I use maxDepth=10 this time, the cost time was not highter than others. 
+"stepSize"
 ~~~
-    impurity_list = ['entropy']
-    max_depth_list = [3, 5, 10, 15, 20, 25]
-    max_bins_list = [10]
-    my_metrics = [
-        train_evaluation_model(train_d, validation_d, impurity, max_depth, max_bins)
-        for impurity in impurity_list
-        for max_depth in max_depth_list
-        for max_bins in max_bins_list
-    ]
-    df = pd.DataFrame(my_metrics,
-                      index=max_depth_list,
-                      columns=['AUC', 'duration', 'impurity', 'maxDepth', 'maxBins', 'model'])
-    show_chart(df, 'maxDepth', 'AUC', 'duration')
+    num_iterations_list = [15]
+    step_size_list = [10, 50, 100, 200]
+    mini_batch_fraction_list = [0.5, 0.8, 1]
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/192575887-816a90e3-d786-4300-9932-e17c247371e2.png)
+![image](https://user-images.githubusercontent.com/75282285/194132258-339e74ad-a243-4652-836a-8d49783c321d.png)
 
-Compared the difference of maxBins parameters. It looked like the AUC was the best one if use maxBins=200 this time.
+
+"miniBatchFraction".
 ~~~
-    impurity_list = ['entropy']
-    max_depth_list = [10]
-    max_bins_list = [3, 5, 10, 50, 100, 200]
-    my_metrics = [
-        train_evaluation_model(train_d, validation_d, impurity, max_depth, max_bins)
-        for impurity in impurity_list
-        for max_depth in max_depth_list
-        for max_bins in max_bins_list
-    ]
-    df = pd.DataFrame(my_metrics,
-                      index=max_bins_list,
-                      columns=['AUC', 'duration', 'impurity', 'maxDepth', 'maxBins', 'model'])
-    show_chart(df, 'maxBins', 'AUC', 'duration')
+    num_iterations_list = [15]
+    step_size_list = [10]
+    mini_batch_fraction_list = [0.5, 0.8, 1]
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/192578482-30a08976-e265-4500-9e18-c1f5e3041344.png)
+![image](https://user-images.githubusercontent.com/75282285/194132553-c1165925-9e03-4428-aac9-3549852a9262.png)
+
 
 
 # Stage2: Train and evaluate   
