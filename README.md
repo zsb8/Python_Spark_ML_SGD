@@ -79,6 +79,7 @@ def predict_data(best_model):
 http://node1:4040/jobs/
 ![image](https://user-images.githubusercontent.com/75282285/194138884-6a3329fa-083b-47e6-8657-42f8008baf88.png)
 ![image](https://user-images.githubusercontent.com/75282285/194139282-0bd3e21d-7076-49fd-8b8e-5d70cf22ace7.png)
+![image](https://user-images.githubusercontent.com/75282285/194139415-f61330f4-2825-4edd-8043-82a0e39cc832.png)
 
 http://node1:8080/
 ![image](https://user-images.githubusercontent.com/75282285/194138246-08d1c8a2-749e-4f72-b91b-f1fa5d69dc51.png)
