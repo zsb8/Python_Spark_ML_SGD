@@ -76,8 +76,10 @@ def predict_data(best_model):
 ![image](https://user-images.githubusercontent.com/75282285/194131514-1b1213e2-785b-43c9-a1f5-5f0fe3fc750e.png)
 
 # Spark monitor
+http://node1:4040/jobs/
 ![image](https://user-images.githubusercontent.com/75282285/194135768-b834425c-29c8-4249-b5b9-ec929e1a0139.png)
 
+http://node1:8080/app/?appId=app-20221006023042-0000
 ![image](https://user-images.githubusercontent.com/75282285/194135595-9817be67-cad7-4c6f-85ee-974628fed460.png)
 
 # DebugString
