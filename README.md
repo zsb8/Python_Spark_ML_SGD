@@ -11,7 +11,8 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 
 
 ## Compare the parameters
-"numIterations"
+"numIterations".  
+Set the step_size=10 and mini_batch_fraction=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 15. 
 ~~~
     num_iterations_list = [5, 15, 20, 50, 100]
     step_size_list = [10]
@@ -21,15 +22,17 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 
 
 "stepSize"
+Set the mum_iteration=15 and mini_batch_fraction=0.8, draw the graph for the stepSize. The AUC is the hightest when step_size is 50.
 ~~~
     num_iterations_list = [15]
     step_size_list = [10, 50, 100, 200]
-    mini_batch_fraction_list = [0.5, 0.8, 1]
+    mini_batch_fraction_list = [0.8]
 ~~~
 ![image](https://user-images.githubusercontent.com/75282285/194132258-339e74ad-a243-4652-836a-8d49783c321d.png)
 
 
 "miniBatchFraction".
+Set the num_iteration=15 and step_size=10, draw the graph for the miniBatchFraction. The AUC is the hightest when mini_batch_fraction is 0.8.
 ~~~
     num_iterations_list = [15]
     step_size_list = [10]
