@@ -82,9 +82,9 @@ def train_evaluation_model(train_data,
     start_time = time()
     model = LogisticRegressionWithSGD.train(train_data, num_iterations, step_size, mini_batch_fraction)
     auc = evaluate_model(model, validation_data)
-    print(f"AUC ==: {auc}")
+    # print(f"AUC ==: {auc}")
     duration = time() - start_time
-    print(f"The time to train was: {duration}")
+    # print(f"The time to train was: {duration}")
     return auc, duration, num_iterations, step_size, mini_batch_fraction, model
 
 
@@ -170,16 +170,24 @@ if __name__ == "__main__":
     read_data()
     train_d, validation_d, test_d = prepare_data()
     print(train_d.first())
-    print("Evaluate parameter".center(60, "="))
-    b_auc, b_model = eval_parameter(train_d, validation_d)
-    print(f"The best AUC is: {b_auc}")
-    predict_data(b_model)
+
     print("Draw the graph - iteration".center(60, "="))
     draw_graph(train_d, validation_d, "numIterations")
     print("Draw the graph - setSize".center(60, "="))
     draw_graph(train_d, validation_d, "stepSize")
     print("Draw the graph - miniBatchFraction".center(60, "="))
     draw_graph(train_d, validation_d, "miniBatchFraction")
+
+    print("Evaluate parameter".center(60, "="))
+    b_auc, b_model = eval_parameter(train_d, validation_d)
+    print(f"The best AUC is: {b_auc}")
+    print("Test".center(60, "="))
+    test_data_auc = evaluate_model(b_model, test_d)
+    print(f"best auc is:{format(b_auc, '.4f')}, test_data_auc is: {format(test_data_auc, '.4f')}, "
+          f"they are only slightly different:{format(abs(float(b_auc) - float(test_data_auc)), '.4f')}")
+    print("Predict".center(60, "="))
+    predict_data(b_model)
+
 
 
 
