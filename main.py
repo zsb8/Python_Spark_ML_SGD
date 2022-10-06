@@ -100,10 +100,10 @@ def eval_parameter(train_data, validation_data):
     ]
     s_metrics = sorted(my_metrics, key=lambda x: x[0], reverse=True)
     best_parameter = s_metrics[0]
-    print(f"the best inpurity is:{best_parameter[2]}\n"
-          f"the best max_depth is:{best_parameter[3]}\n"
-          f"the best max_bins is:{best_parameter[4]}\n"
-          f"the best AUC is:{best_parameter[0]}\n")
+    print(f"The best numIterations_list is:{best_parameter[2]}\n"
+          f"The best stepSize:{best_parameter[3]}\n"
+          f"The best miniBatchFraction is:{best_parameter[4]}\n"
+          f"The best AUC is:{best_parameter[0]}\n")
     best_auc = best_parameter[0]
     best_model = best_parameter[5]
     return best_auc, best_model
