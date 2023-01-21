@@ -1,4 +1,4 @@
-Data is pubic.
+This a sample code, not really business code. I won't expose the company's code.  Data is pubic.
 # Python_Spark_ML_SGD
 Use SGD algorithm to machine learning, find the best mode to predict the validation of website.
 
